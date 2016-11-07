@@ -51,7 +51,7 @@
 <!--============================== header =================================-->
 	<?php 
         include("/../seguridad/sinIniciar.php");
-        include("/../inc/header.inc");
+        include("/../inc/header.inc.php");
               
         ?>
 	
