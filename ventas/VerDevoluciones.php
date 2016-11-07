@@ -94,6 +94,8 @@ tr:hover td { background: #d0dafd; color: #339; }
         }  
       
       $respuesta=$con->query($sql);
+      if($respuesta->num_rows >0)
+       {
             echo '<center><table>
         <tr>
           <td><strong>Nombre</strong></td>
@@ -116,6 +118,11 @@ tr:hover td { background: #d0dafd; color: #339; }
             ';  
       }
       echo '</table>  <center>';
+       }
+       else
+       {
+           echo '<h2>No hay devoluciones</h2>';
+       }
       ?>
 
  </div>
