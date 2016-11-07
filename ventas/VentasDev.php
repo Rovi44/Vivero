@@ -113,9 +113,9 @@ tr:hover td { background: #d0dafd; color: #339; }
                                     echo '
                                             <tr>
                                               <td>'.$fila['Nombre'].'</td>
-                                              <td>'.$fila['Precio'].'</td>
+                                              <td>$'.$fila['Precio'].'</td>
                                               <td>'.$fila['Cantidad'].'</td>
-                                              <td>'.$fila['Total'].'</td>';
+                                              <td>$'.$fila['Total'].'</td>';
                                     if($_SESSION['permisos']['Ventas']['Modificar'] === '1')
                                     {
                                             echo  '<td> <button  class="fa fa-share btn btn-small btn-success" style="margin-top: -7px;" onclick="return abrirDevolucion(\''.$idP.'\',\''.$Nombre.'\',\''.$Precio.'\',\''.$Cantidad.'\',\''.$Total.'\',\''.$Fecha.'\',\''.$idU.'\',\''.$idV.'\',\''.$Descripcion.'\');"></button></td>

@@ -118,9 +118,9 @@ tr:hover td { background: #d0dafd; color: #339; }
                                     echo '
                                             <tr>
                                               <td>'.$fila['Nombre'].'</td>
-                                              <td>'.$fila['Precio'].'</td>
+                                              <td>$'.$fila['Precio'].'</td>
                                               <td>'.$fila['Cantidad'].'</td>
-                                              <td>'.$fila['Total'].'</td>
+                                              <td>$'.$fila['Total'].'</td>
                                               <td>'.$fila['Usuario'].'</td>';
                                     
                                     if($_SESSION['permisos']['Ventas']['Modificar'] === '1')

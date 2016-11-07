@@ -64,13 +64,13 @@ class Carrito
             foreach ($this->productos as $value) {
                 echo '<tr><td>'.($value->nombre).'</td>';
                 echo '<td>'.($value->cantidad).'</td>';
-                echo '<td>'.($value->precio).'</td>';
-                echo '<td>'.($value->precio * $value->cantidad).'</td>';
+                echo '<td>$'.($value->precio).'</td>';
+                echo '<td>$'.($value->precio * $value->cantidad).'</td>';
                 echo '<td><button class="btn btn-danger btn-small fa fa-close" onclick="return dropItem('.$i.')"></button></td><tr>';
                 $i++;
             }
             echo '<tr><td colspan="4">Total:</td>';
-            echo '<td>'.$this->total.'</td>';
+            echo '<td>$'.$this->total.'</td>';
             echo '</table>';
         }
     }
@@ -89,8 +89,8 @@ class Carrito
             foreach ($this->productos as $value) {
                 echo '<tr><td>'.($value->nombre).'</td>';
                 echo '<td>'.($value->cantidad).'</td>';
-                echo '<td>'.($value->precio).'</td>';
-                echo '<td>'.($value->precio * $value->cantidad).'</td>';
+                echo '<td>$'.($value->precio).'</td>';
+                echo '<td>$'.($value->precio * $value->cantidad).'</td>';
                 if($value->cantidad > 0 && $permiso === '1')
                 {
                         echo '<td><button class="btn btn-success btn-small fa fa-reply" onclick="return dev('.($value->cantidad).','.($value->id).','.($value->precio).')"></button></td><tr>';
@@ -101,7 +101,7 @@ class Carrito
                 }
             }
             if($permiso == '1'){echo '<tr><td colspan="4">Total:</td>';}else{echo '<tr><td colspan="3">Total:</td>';}
-            echo '<td>'.$this->total.'</td>';
+            echo '<td>$'.$this->total.'</td>';
             echo '</table></div>';
         }
     }
@@ -119,12 +119,12 @@ class Carrito
             foreach ($this->productos as $value) {
                 echo '<tr><td>'.($value->nombre).'</td>';
                 echo '<td>'.($value->cantidad).'</td>';
-                echo '<td>'.($value->precio).'</td>';
-                echo '<td>'.($value->precio * $value->cantidad).'</td>';
+                echo '<td>$'.($value->precio).'</td>';
+                echo '<td>$'.($value->precio * $value->cantidad).'</td>';
                 
             }
             echo '<tr><td colspan="3">Total:</td>';
-            echo '<td>'.$this->total.'</td>';
+            echo '<td>$'.$this->total.'</td>';
             echo '</table></div>';
         }
     }

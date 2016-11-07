@@ -86,8 +86,13 @@ tr:hover td { background: #d0dafd; color: #339; }
               <?php
        include(dirname(__DIR__).'/bdd/connect.php');
 
-      $sql="select producto.Id_Proudcto ,producto.Nombre, producto.Precio ,devolucionesventas.Cantidad, devolucionesventas.Total,ventas.Fecha,usuarios.Usuario from devolucionesventas INNER join producto on devolucionesventas.Id_Proudcto = producto.Id_Proudcto INNER JOIN ventas on ventas.Id_Venta=devolucionesventas.Id_Venta INNER JOIN usuarios on usuarios.Id_Usuario=ventas.Id_Usuario";
+      $sql="select producto.Id_Proudcto ,producto.Nombre, producto.Precio ,devolucionesventas.Cantidad, devolucionesventas.Total,ventas.Fecha,usuarios.Usuario, usuarios.Id_Usuario from devolucionesventas INNER join producto on devolucionesventas.Id_Proudcto = producto.Id_Proudcto INNER JOIN ventas on ventas.Id_Venta=devolucionesventas.Id_Venta INNER JOIN usuarios on usuarios.Id_Usuario=ventas.Id_Usuario";
 
+      if($_SESSION['permisos']['Ventas']['Modificar'] === '0')
+        {
+            $sql = $sql." where usuarios.Id_Usuario = ".$_SESSION['id'];
+        }  
+      
       $respuesta=$con->query($sql);
             echo '<center><table>
         <tr>
@@ -103,9 +108,9 @@ tr:hover td { background: #d0dafd; color: #339; }
         echo '
           <tr>
             <td>'.$fila['Nombre'].'</td>
-            <td>'.$fila['Precio'].'</td>
+            <td>$'.$fila['Precio'].'</td>
             <td>'.$fila['Cantidad'].'</td>
-            <td>'.$fila['Total'].'</td>
+            <td>$'.$fila['Total'].'</td>
             <td>'.$fila['Usuario'].'</td>
           </tr>
             ';  
