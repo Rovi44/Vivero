@@ -73,7 +73,7 @@
 				
 				<span id="responsiveFlag"></span>
 				<div class="block-slogan">
-                                    <?php if(isset($_SESSION['valido']) && $_SESSION['valido'] == true)
+                                    <?php if(isset($_SESSION['valido']) && $_SESSION['valido'] === true)
                                         {
 					  echo '<h2>Bivenenido: '.$_SESSION['usr'].'!</h2>';
                                         }
