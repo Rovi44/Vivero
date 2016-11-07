@@ -1,6 +1,6 @@
 <?php
-    include('/../bdd/connect.php');
-    include('/../inc/carrito.php');
+    include(dirname(__DIR__).'/bdd/connect.php');
+    include(dirname(__DIR__).'/inc/carrito.php');
     if(isset($_POST['id']))
     {
         echo '<div class="row text-center">'

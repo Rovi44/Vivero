@@ -53,12 +53,12 @@
     <div class="spinner"></div> 
 <!--============================== header =================================-->
 	<?php 
-        include("/../seguridad/sinIniciar.php");
+        include(dirname(__DIR__)."/seguridad/sinIniciar.php");
             if($_SESSION['permisos']['Usuarios']['Modificar'] === '0')
             {
                 header("location: ../seguridad/noautorizado.php");
             }
-        include("/../inc/header.inc"); ?>
+        include(dirname(__DIR__)."/inc/header.inc"); ?>
 	
 <!--============================== header =================================-->
         <?php include('buscarUsuario.php'); ?>

@@ -5,7 +5,7 @@
            if(isset($_POST['submit']) || (isset($_POST['option']) && $_POST['option']=='1'))
             {
                 session_start();
-                include('/../bdd/connect.php');
+                include(dirname(__DIR__).'/bdd/connect.php');
                 $correo = $con->real_escape_string(strtolower($_POST['email']));
                 $pass = $con->real_escape_string($_POST['pass']);
                 $name = $con->real_escape_string($_POST['name']);

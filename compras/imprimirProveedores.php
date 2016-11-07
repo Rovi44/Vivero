@@ -1,7 +1,7 @@
 <?php
 if(isset($var) && $var==true)
 {
-    include('/../bdd/connect.php');
+    include(dirname(__DIR__).'/bdd/connect.php');
     $qr ="SELECT * FROM proveedores limit ".(($_GET['page']-1)*$tpages).', '.($_GET['page']*$tpages);
 
     if($resultado = $con->query($qr))

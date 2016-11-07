@@ -1,6 +1,6 @@
 <?php
-    include('/../bdd/connect.php');
-    include('../inc/carrito.php');
+    include(dirname(__DIR__).'/bdd/connect.php');
+    include(dirname(__DIR__).'/inc/carrito.php');
     session_start();
     if(isset($_POST['option']))
     {

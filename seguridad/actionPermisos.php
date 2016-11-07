@@ -3,7 +3,7 @@
 <?php
     if(isset($_POST['groupName']) || isset($_POST['id']))
     {
-        include('../bdd/connect.php');
+        include(dirname(__DIR__).'/bdd/connect.php');
         if($_POST['option'] == '1')
         {
             $insert = 'INSERT INTO `grupo`(`Grupo`) VALUES(\''.$_POST['groupName'].'\')';

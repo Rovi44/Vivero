@@ -1,5 +1,5 @@
 <?php
-    include('/../bdd/connect.php');
+    include(dirname(__DIR__).'/bdd/connect.php');
     $qr = "select count(Id_Usuario) as total from usuarios";
     $resultado = $con->query($qr);
     $actual = $_GET['page'];

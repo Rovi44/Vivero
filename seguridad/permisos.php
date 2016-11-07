@@ -57,12 +57,12 @@
 <!--============================== header =================================-->
 	<?php   
         
-                include('/../seguridad/sinIniciar.php');
+                include(dirname(__DIR__).'/seguridad/sinIniciar.php');
                 if($_SESSION['permisos']['Permisos']['Ingresar'] === '0')
                 {
                     header("location: ../seguridad/noautorizado.php");
                 }
-                include("/../inc/header.inc");?>
+                include(dirname(__DIR__)."/inc/header.inc");?>
 	
 <!--============================== header =================================-->
 	<div class="bg-content">
@@ -78,7 +78,7 @@
                                 <form action="permisos.php" method="post">
                                     <h5>Seleccione un grupo</h5>
                                     <?php 
-                                        include('/../bdd/connect.php'); 
+                                        include(dirname(__DIR__).'/bdd/connect.php'); 
                                         include('selectPermisos.php');
                                     
                                     

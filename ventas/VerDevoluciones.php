@@ -67,8 +67,8 @@ tr:hover td { background: #d0dafd; color: #339; }
 <header>
       <?php 
        
-        include("/../seguridad/sinIniciar.php");
-      include("/../inc/header.inc"); 
+        include(dirname(__DIR__)."/seguridad/sinIniciar.php");
+      include(dirname(__DIR__)."/inc/header.inc"); 
         if($_SESSION['permisos']['Ventas']['Ingresar'] === '0')
         {
             header("location: ../seguridad/noautorizado.php");
@@ -84,7 +84,7 @@ tr:hover td { background: #d0dafd; color: #339; }
         </article>
              <div class="form-group">
               <?php
-       include('/../bdd/connect.php');
+       include(dirname(__DIR__).'/bdd/connect.php');
 
       $sql="select producto.Id_Proudcto ,producto.Nombre, producto.Precio ,devolucionesventas.Cantidad, devolucionesventas.Total,ventas.Fecha,usuarios.Usuario from devolucionesventas INNER join producto on devolucionesventas.Id_Proudcto = producto.Id_Proudcto INNER JOIN ventas on ventas.Id_Venta=devolucionesventas.Id_Venta INNER JOIN usuarios on usuarios.Id_Usuario=ventas.Id_Usuario";
 

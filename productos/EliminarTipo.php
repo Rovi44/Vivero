@@ -7,12 +7,12 @@ session_start();
     if(isset($_POST['tipoP']))
     {
 
-    	$conexion=new mysqli("localhost","root","","vivero");
+        include(dirname(__DIR__).'/bdd/connect.php');
 
     	$nuevoTipo=$_POST["tipoP"];
 
     	$consulta="DELETE FROM `tipo` WHERE Id_Tipo='".$nuevoTipo."'";
-    	$resultado=$conexion->query($consulta);
+    	$resultado=$con->query($consulta);
 
     	echo $resultado;
     	try{
@@ -23,7 +23,7 @@ session_start();
             }
             catch (Exception $e)
             {
-                $conexion->rollback();
+                $con->rollback();
                 
             }
 

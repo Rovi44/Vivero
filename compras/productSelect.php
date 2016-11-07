@@ -1,7 +1,7 @@
 <?php
 if(isset($var) && $var==true)
 {
-    include('/../bdd/connect.php');
+    include(dirname(__DIR__).'/bdd/connect.php');
     $select = "select Id_Proudcto, Nombre, Precio from producto";
     
    if($resultado = $con->query($select))

@@ -40,8 +40,8 @@
 <div class="spinner"></div>
 <!--============================== header =================================-->
     <?php 
-        include("/../seguridad/sinIniciar.php");
-        include("/../inc/header.inc"); 
+        include(dirname(__DIR__)."/seguridad/sinIniciar.php");
+        include(dirname(__DIR__)."/inc/header.inc"); 
         if($_SESSION['permisos']['Productos']['Agregar'] === '0')
         {
             header("location: ../seguridad/noautorizado.php");
@@ -100,13 +100,13 @@
                 </form>-->
 
       <?php
-      $conexion =new mysqli("localhost","root","","vivero");
+        include(dirname(__DIR__).'/bdd/connect.php');
         if (mysqli_connect_errno()) {
         die("Error al conectar: ".mysqli_connect_error());
         }
 
       $sql="SELECT Id_Tipo,Nombre FROM `tipo`";
-      $resultado=$conexion->query($sql);
+      $resultado=$con->query($sql);
       ?>
 
        <form action=Ingresar.php method="POST" enctype="multipart/form-data">

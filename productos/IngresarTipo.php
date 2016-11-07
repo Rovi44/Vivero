@@ -5,7 +5,7 @@ session_start();
 if(isset($_POST['groupName']))
     {
 
-        include('/../bdd/connect.php');
+        include(dirname(__DIR__).'/bdd/connect.php');
 
     	$nuevoTipo=$_POST["groupName"];
 

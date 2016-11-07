@@ -2,7 +2,7 @@
 if(isset($_POST['submit']))
 {
     session_start();
-    include('/../bdd/connect.php');
+    include(dirname(__DIR__).'/bdd/connect.php');
         
     if(isset($_POST['user']) && isset($_POST['pass'])){
         $usuario = mysqli_escape_string($con, strtolower($_POST['user']));

@@ -58,8 +58,8 @@
     <div class="spinner"></div> 
 <!--============================== header =================================-->
 	<?php   
-                include('../inc/carrito.php');
-                include('/../seguridad/sinIniciar.php');
+                include(dirname(__DIR__).'/inc/carrito.php');
+                include(dirname(__DIR__).'/seguridad/sinIniciar.php');
                 if($_SESSION['permisos']['Compras']['Ingresar'] === '0')
                 {
                     header("location: ../seguridad/noautorizado.php");
@@ -75,7 +75,7 @@
                         }
                         $_SESSION['carrito']->add($item);
                     }
-                include("/../inc/header.inc");?>
+                include(dirname(__DIR__)."/inc/header.inc.php");?>
 <!--============================== header =================================-->
 	<div class="bg-content">
             <div class="container"><br>

@@ -2,10 +2,10 @@
 	session_start();
         if(isset($_POST['commit']))
         {
-        include('/../bdd/connect.php');
+        include(dirname(__DIR__).'/bdd/connect.php');
 
 
-		if ($_POST) {
+		if ($_POST['commit']) {
 	
 		$nombre = $_POST["nombre"];
 		$precio = $_POST["precio"];

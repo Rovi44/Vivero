@@ -3,8 +3,8 @@
     
       <?php 
        
-        include("/../seguridad/sinIniciar.php");
-        include("/../inc/header.inc"); 
+        include(dirname(__DIR__)."/seguridad/sinIniciar.php");
+        include(dirname(__DIR__)."/inc/header.inc"); 
         if($_SESSION['permisos']['Ventas']['Agregar'] === '0')
         {
             header("location: ../seguridad/noautorizado.php");
@@ -80,7 +80,7 @@ tr:hover td { background: #d0dafd; color: #339; }
              <div class="form-group">
 
 <?php
-                        include('/../bdd/connect.php');
+                        include(dirname(__DIR__).'/bdd/connect.php');
 
 
 			$idS=$_SESSION['id'];

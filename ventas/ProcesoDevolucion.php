@@ -2,7 +2,7 @@
 session_start();
 if(isset($_POST["idP"]))
 {
-       include('/../bdd/connect.php');
+       include(dirname(__DIR__).'/bdd/connect.php');
   				$idP=$_POST["idP"];
 				$Nombre=$_POST["Nombre"];
 				$Precio=$_POST["Precio"];

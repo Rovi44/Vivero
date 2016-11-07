@@ -3,7 +3,7 @@ session_start();
 
 if(isset($_POST['id']))
 {
-   include('/../bdd/connect.php');
+   include(dirname(__DIR__).'/bdd/connect.php');
 
   $id=$_POST["id"];
   //  echo $id;

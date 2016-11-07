@@ -1,5 +1,5 @@
 <?php
-    include('/../bdd/connect.php');
+    include(dirname(__DIR__).'/bdd/connect.php');
     
     if(isset($_POST['value']))
     {

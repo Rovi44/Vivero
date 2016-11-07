@@ -2,7 +2,7 @@
 session_start();    
     if(!isset($_SESSION['valido']))
     {
-        include_once('/../bdd/connect.php');
+        include_once(dirname(__DIR__).'/bdd/connect.php');
         $_SESSION['user'] = "sin_validar";
         $_SESSION['valido'] = "false";
         $qr = "SELECT modulos.Pantalla, grupo.Grupo , `Ingresar`, `Agregar`, `Modificar`, `Borrar` FROM `permisos` ";

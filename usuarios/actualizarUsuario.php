@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['id']))
     { 
-        include("/../bdd/connect.php");
+        include(dirname(__DIR__)."/bdd/connect.php");
         if($_POST['option'] == "1")
         {
             $correo = $con->real_escape_string(strtolower($_POST['email']));

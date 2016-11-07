@@ -56,7 +56,7 @@
 <!--============================== header =================================-->
 	<?php   
         
-                include('/../seguridad/sinIniciar.php');
+                include(dirname(__DIR__).'/seguridad/sinIniciar.php');
                 if($_SESSION['permisos']['Usuarios']['Ingresar'] === '0')
                 {
                     header("location: ../seguridad/noautorizado.php");
@@ -65,7 +65,7 @@
                 {
                     header("location: ../usuarios/adUsusarios.php?page=1");
                 }
-                include("/../inc/header.inc");?>
+                include(dirname(__DIR__)."/inc/header.inc");?>
 <!--============================== header =================================-->
 	<div class="bg-content">
             <div class="container"><br>

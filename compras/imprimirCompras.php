@@ -1,7 +1,7 @@
 <?php
 if(isset($var) && $var = true)
 {
-    include('/../bdd/connect.php');
+    include(dirname(__DIR__).'/bdd/connect.php');
     $select = "SELECT compras.Id_Compra, proveedores.Nombre, compras.Fecha, compras.Total, compras.Descripcion, usuarios.Usuario from compras INNER JOIN proveedores on compras.Id_Proveedor = proveedores.Id_Proveedor INNER JOIN usuarios on usuarios.Id_Usuario = compras.Id_Usuario limit ".(($_GET['page']-1)*$tpages).', '.($_GET['page']*$tpages);
     
     if($resultado = $con->query($select))

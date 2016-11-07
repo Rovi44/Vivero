@@ -1,6 +1,6 @@
 <script src="../js/jquery.js" type="text/javascript"></script>
 <?php
-    include('/../bdd/connect.php');
+    include(dirname(__DIR__).'/bdd/connect.php');
     if(isset($_POST['id']))
     {
         $total = $_POST['cantidad']*$_POST['price'];

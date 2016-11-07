@@ -37,8 +37,8 @@
 <div class="spinner"></div>
 <!--============================== header =================================-->
  <?php
-        include("/../seguridad/sinIniciar.php");
-        include('/../bdd/connect.php');
+        include(dirname(__DIR__)."/seguridad/sinIniciar.php");
+        include(dirname(__DIR__).'/bdd/connect.php');
         if (mysqli_connect_errno()) {
         die("Error al conectar: ".mysqli_connect_error());
         }
@@ -47,7 +47,7 @@
       $resultado=$con->query($sql);
       ?>
     <header>
-      <?php include("/../inc/header.inc"); 
+      <?php include(dirname(__DIR__)."/inc/header.inc"); 
         if($_SESSION['permisos']['Productos']['Ingresar'] === '0')
         {
             header("location: ../seguridad/noautorizado.php");
