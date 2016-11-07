@@ -135,7 +135,7 @@
 					echo '<button type="submit" class="fa fa-trash btn btn-small btn-danger" style="margin-top: -7px;" onclick="return abrirBorrarP(\''.$id.'\',\''.$nombre.'\',\''.$precio.'\',\''.$cantidad.'\',\''.$descripcion.'\',\''.$tipo.'\',\''.$ruta.'\');"></button>';
 				}
 				
-				if($_SESSION['permisos']['Ventas']['Ingresar'] === '1')
+				if($_SESSION['permisos']['Ventas']['Agregar'] === '1')
 				{
 					echo '<button type="submit" class="fa fa-tag btn btn-small" style="margin-top: -7px;" onclick=" return abrirVenta(\''.$id.'\',\''.$nombre.'\',\''.$precio.'\',\''.$cantidad.'\',\''.$descripcion.'\',\''.$tipo.'\',\''.$ruta.'\');"></button>
                   ';
