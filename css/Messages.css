@@ -1,0 +1,16 @@
+.messages
+{
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.errorMsg
+{
+    border-color:#FFBF48;
+}
+
+.successMsg
+{
+    border-color:#12A11C;
+}

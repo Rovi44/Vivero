@@ -1,0 +1,10 @@
+body {
+	background-color: #CEF6CE;
+}
+
+#emptyName{
+}
+
+#errorName{
+    display: none;
+}

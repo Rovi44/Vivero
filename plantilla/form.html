@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="js/forms.js"></script>
+    </head>
+    <body>
+        <form id="contact-form" onsubmit="reutrn false;">
+                  <div class="success"> Contact form submitted! <strong>We will be in touch soon.</strong> </div>
+                  <fieldset>
+                <div>
+                    <label class="name">
+                        <input type="text" class="form-control" value="Your name">
+					<br>
+                    <span class="error">*This is not a valid name.</span> <span class="empty">*This field is required.</span> </label>
+                </div>
+                 
+                      <div>
+                          <label class="name">
+                          <input type="text" class="form-control" value="Your name">
+                          <span class="empty">*This field is required.</span></label>
+                      </div>
+                      
+                  <div>
+                    <label class="phone">
+                    <input type="tel" class="form-control"  value="Telephone">
+                    <br>
+                    <span class="error">*This is not a valid phone number.</span> <span class="empty">*This field is required.</span> </label>
+                    </div>
+                <div>
+                    <label class="email">
+                    <input type="email"  class="form-control"  value="Email">
+                    <br>
+                    <span class="error">*This is not a valid email address.</span> <span class="empty">*This field is required.</span> </label>
+                    </div>
+                <div>
+                    <label class="message">
+                    <textarea class="form-control" >Message</textarea>
+                    <br>
+                    <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
+                    </div>
+                <div class="buttons-wrapper"> <a class="btn btn-1" data-type="reset">Clear</a> <a class="btn btn-1" data-type="submit">Send</a></div>
+              </fieldset>
+                </form>
+    </body>
+</html>
