@@ -51,14 +51,13 @@
 <!--============================== header =================================-->
 	<?php 
         include("/../seguridad/sinIniciar.php");
-        include("/../inc/header.inc.php");
+        include(dirname(__DIR__)."/inc/header.inc.php");
               
         ?>
 	
 <!--============================== header =================================-->
 	<div class="bg-content">
 		<div class="container">
-                    <?php echo __DIR__;?>
 		<div class="row">
 			<div class="span12"> 
 			<!--============================== slider =================================-->
