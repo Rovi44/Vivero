@@ -76,7 +76,6 @@ tr:hover td { background: #d0dafd; color: #339; }
           <div class="row">
         <article class="span12">
         <center><h3>Mis Compras</h3></center>
-        <a class="text-center" href="VerDevoluciones.php">Ver Devoluciones</a>
         </article>
              <div class="form-group">
 
@@ -89,6 +88,7 @@ tr:hover td { background: #d0dafd; color: #339; }
 			$respuesta=$con->query($sql);
                          if($respuesta->num_rows >0)
                          {
+                             echo '<a class="text-center" href="VerDevoluciones.php">Ver Devoluciones</a>';
 						echo '<center><table>
 				<tr>
 				  <td><strong>Nombre</strong></td>
