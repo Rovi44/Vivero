@@ -132,7 +132,7 @@ $(".form").submit(function()
        $(this).trigger('blur');
    });
    
-   if($var)
+   if($var || ($('#items').find('input.option').val() === '2'))
    {
        $("this").submit();
    }
