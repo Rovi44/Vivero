@@ -76,7 +76,7 @@ tr:hover td { background: #d0dafd; color: #339; }
           <div class="row">
         <article class="span12">
         <center><h3>Mis Compras</h3></center>
-        <a class="text-center">Ver Devoluciones</a>
+        <a class="text-center" href="VentasDev.php">Ver Devoluciones</a>
         </article>
              <div class="form-group">
 
