@@ -50,8 +50,8 @@
     <div class="spinner"></div> 
 <!--============================== header =================================-->
 	<?php 
-        include("../seguridad/sinIniciar.php");
-        include("../inc/header.inc.php");
+        include("/../seguridad/sinIniciar.php");
+        include("/../inc/header.inc.php");
               
         ?>
 	
