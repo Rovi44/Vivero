@@ -124,7 +124,7 @@
 
                 echo'<h5>"'.$fila['Nombre'].'"</h5>
                 <p>'.$fila['Descripcion'].'</p>'
-                        .'<p>'.$precio.'</p>';
+                        .'<p>$'.$precio.'</p>';
 				
 				if($_SESSION['permisos']['Productos']['Modificar'] === '1')
 				{
