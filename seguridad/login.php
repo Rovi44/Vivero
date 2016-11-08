@@ -51,7 +51,7 @@
 		</div>
 		<div class="col-sm-offset-4 col-sm-4">
                         <center><small class="text-muted text-center">&iquest;No tienes una cuenta?<a href="signup.php"> Crea una</a></small> </center>
-                        <center><a href=../home/index.php"> Inicio </a></center>
+                        <center><a href="../home/index.php"> Inicio </a></center>
 		</div>
 	</section>
     
